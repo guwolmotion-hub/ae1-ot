@@ -6,7 +6,7 @@
 <title>AFTER EFFECTS OT — SBS아카데미 구월지점</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 /* ─────────────────────────────────────
    TOKENS
@@ -24,7 +24,7 @@
   --border-light:rgba(255,255,255,0.1);
   --r:14px;
   --r-lg:22px;
-  --font-display:'Bebas Neue',sans-serif;
+  --font-display:'Helvetica Neue',Helvetica,Arial,sans-serif;
   --font-body:'Noto Sans KR',sans-serif;
 }
 
@@ -106,10 +106,27 @@ body:has(a:hover) #cursor-follower{width:60px;height:60px;opacity:.3;}
 nav{
   position:fixed;top:0;left:0;right:0;
   z-index:200;
-  display:flex;align-items:center;justify-content:space-between;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
   padding:20px 48px;
   transition:all .35s;
 }
+.nav-center{display:flex;justify-content:center;}
+.nav-cta-btn{
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:.72rem;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;
+  background:var(--purple);
+  border:none;
+  padding:9px 22px;
+  border-radius:99px;
+  cursor:pointer;
+  transition:background .2s,transform .15s;
+  white-space:nowrap;
+}
+.nav-cta-btn:hover{background:var(--purple-dark);transform:scale(1.04);}
 nav.stuck{
   background:rgba(10,10,10,0.92);
   backdrop-filter:blur(20px);
@@ -117,9 +134,10 @@ nav.stuck{
   padding:14px 48px;
 }
 .nav-logo{
-  font-family:var(--font-display);
-  font-size:1.5rem;
-  letter-spacing:.05em;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:1.35rem;
+  font-weight:900;
+  letter-spacing:.02em;
   color:#fff;
 }
 .nav-logo em{color:var(--purple);font-style:normal;}
@@ -140,7 +158,7 @@ nav.stuck{
   animation:blink 1.4s ease infinite;
 }
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.2;}}
-.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links{display:flex;gap:28px;list-style:none;justify-content:flex-end;}
 .nav-links a{
   font-size:.82rem;font-weight:600;
   color:rgba(255,255,255,.5);
@@ -217,8 +235,9 @@ nav.stuck{
 .hero-title{
   font-family:var(--font-display);
   font-size:clamp(5rem,14vw,13rem);
-  line-height:.9;
-  letter-spacing:-.01em;
+  line-height:.88;
+  letter-spacing:-.04em;
+  font-weight:900;
   color:#fff;
   display:block;
   transform:translateY(110%);
@@ -246,7 +265,7 @@ nav.stuck{
 .hero-desc{
   max-width:500px;
   font-size:1rem;
-  line-height:1.85;
+  line-height:1.9;
   color:rgba(255,255,255,.55);
   font-weight:500;
 }
@@ -501,7 +520,7 @@ nav.stuck{
 }
 .inst-tag::before{content:'';width:20px;height:1.5px;background:var(--purple);}
 .inst-name-en{
-  font-family:var(--font-display);
+  font-family:var(--font-display);font-weight:900;
   font-size:clamp(3rem,7vw,6.5rem);
   line-height:.9;
   letter-spacing:.02em;
@@ -900,7 +919,7 @@ footer{
   width:fit-content;
 }
 .lic-badge-private{background:rgba(200,164,86,.15);color:var(--gold);}
-.lic-name-en{font-family:var(--font-display);font-size:2.4rem;color:#fff;line-height:1;}
+.lic-name-en{font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:#fff;line-height:1;letter-spacing:-.02em;}
 .lic-name-kr{font-size:.9rem;font-weight:700;color:rgba(255,255,255,.8);}
 .lic-org{font-size:.75rem;color:rgba(255,255,255,.35);font-weight:500;}
 .lic-desc{font-size:.82rem;line-height:1.75;color:rgba(255,255,255,.55);font-weight:500;}
@@ -976,6 +995,90 @@ footer{
 @media(max-width:768px){.rm-steps{gap:6px;}.rm-step{font-size:.75rem;padding:6px 10px;}}
 
 /* ── FPS ── */
+.layer-section{margin-bottom:64px;}
+.layer-section-title{
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:2rem;font-weight:900;
+  letter-spacing:-.03em;
+  color:#fff;margin-bottom:8px;
+}
+.layer-section-sub{
+  font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:36px;line-height:1.8;
+}
+.layer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:16px;
+  margin-bottom:40px;
+}
+.layer-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r);
+  padding:20px 22px;
+  transition:border-color .2s,transform .2s;
+  page-break-inside:avoid;break-inside:avoid;
+}
+.layer-card:hover{border-color:var(--purple);transform:translateY(-3px);}
+.layer-card-icon{font-size:1.6rem;margin-bottom:10px;}
+.layer-card-name{
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:.95rem;font-weight:800;
+  letter-spacing:.01em;
+  color:#fff;margin-bottom:6px;
+}
+.layer-card-name span{color:var(--purple-light);}
+.layer-card-desc{font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.65;}
+.transform-table{
+  width:100%;border-collapse:collapse;margin-bottom:40px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r);overflow:hidden;
+}
+.transform-table th{
+  background:rgba(155,89,182,.18);
+  color:var(--purple-light);
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:.75rem;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:14px 20px;text-align:left;
+}
+.transform-table td{
+  padding:14px 20px;
+  font-size:.85rem;color:rgba(255,255,255,.8);
+  border-top:1px solid rgba(255,255,255,.06);
+  line-height:1.6;
+}
+.transform-table tr:hover td{background:rgba(155,89,182,.06);}
+.transform-key{
+  display:inline-block;
+  background:rgba(155,89,182,.2);
+  border:1px solid rgba(155,89,182,.4);
+  color:var(--purple-light);
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight:900;font-size:.78rem;
+  padding:2px 10px;border-radius:5px;
+  letter-spacing:.06em;
+}
+.blend-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:12px;
+}
+.blend-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;
+  padding:16px 18px;
+  transition:border-color .2s;
+}
+.blend-card:hover{border-color:var(--purple);}
+.blend-name{
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:.88rem;font-weight:800;
+  color:#fff;margin-bottom:5px;letter-spacing:.01em;
+}
+.blend-desc{font-size:.75rem;color:rgba(255,255,255,.45);line-height:1.6;}
 .fps-section{margin-top:60px;padding-top:60px;border-top:1px solid rgba(255,255,255,.07);}
 .fps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;}
 .fps-card{
@@ -987,7 +1090,7 @@ footer{
 .fps-card-highlight{
   background:rgba(155,89,182,.1);border-color:rgba(155,89,182,.25);
 }
-.fps-num{font-family:var(--font-display);font-size:3rem;color:#fff;line-height:1;}
+.fps-num{font-family:var(--font-display);font-size:3rem;color:#fff;line-height:1;font-weight:900;}
 .fps-label{font-size:.7rem;font-weight:700;color:var(--purple-light);letter-spacing:.1em;margin-bottom:10px;}
 .fps-tag-wrap{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;margin-bottom:12px;}
 .fps-tag{
@@ -1021,6 +1124,7 @@ footer{
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-logo"><em>AFTER</em>EFFECTS OT</div>
+  <div class="nav-center"><a href="#curriculum" class="nav-cta-btn">커리큘럼 보기</a></div>
   <ul class="nav-links">
     <li><a href="#instructor">강사소개</a></li>
     <li><a href="#curriculum">커리큘럼</a></li>
@@ -1693,11 +1797,128 @@ footer{
     </div>
   </div>
 
+  <!-- 레이어 개념 섹션 -->
+  <div class="layer-section reveal">
+    <div class="s-tag" style="margin-bottom:16px;">After Effects 핵심 개념</div>
+    <div class="layer-section-title">레이어<em style="color:var(--purple-light);"> — Layer 시스템 이해하기</em></div>
+    <p class="layer-section-sub">After Effects의 모든 작업은 레이어(Layer) 단위로 이루어집니다.<br>레이어의 종류와 속성을 이해하면 복잡한 합성도 체계적으로 구성할 수 있습니다.</p>
+
+    <div class="s-tag" style="margin-bottom:20px;font-size:.65rem;">레이어 8종류</div>
+    <div class="layer-grid">
+      <div class="layer-card">
+        <div class="layer-card-icon">🎬</div>
+        <div class="layer-card-name"><span>01</span> Footage</div>
+        <div class="layer-card-desc">영상·이미지·음원 소스 파일을 타임라인에 배치한 가장 기본적인 레이어.</div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-card-icon">✏️</div>
+        <div class="layer-card-name"><span>02</span> Text</div>
+        <div class="layer-card-desc">타이포그래피·자막·키네틱 텍스트 애니메이션에 사용. 애니메이터 기능 내장.</div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-card-icon">⬟</div>
+        <div class="layer-card-name"><span>03</span> Shape</div>
+        <div class="layer-card-desc">벡터 도형 레이어. 패스·리피터·트림 패스 등으로 모션그래픽의 핵심을 담당.</div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-card-icon">🟪</div>
+        <div class="layer-card-name"><span>04</span> Solid</div>
+        <div class="layer-card-desc">단색 레이어. 배경, 이펙트 적용 베이스, 마스크 용도로 자주 활용.</div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-card-icon">✨</div>
+        <div class="layer-card-name"><span>05</span> Adjustment</div>
+        <div class="layer-card-desc">아래 모든 레이어에 이펙트를 일괄 적용. 색보정·블러 등 전체 보정에 사용.</div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-card-icon">🔵</div>
+        <div class="layer-card-name"><span>06</span> Null Object</div>
+        <div class="layer-card-desc">보이지 않는 제어용 레이어. 여러 레이어를 Parent로 묶어 일괄 제어할 때 필수.</div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-card-icon">📷</div>
+        <div class="layer-card-name"><span>07</span> Camera</div>
+        <div class="layer-card-desc">3D 컴포지션에서 시점 제어. 초점거리·피사계심도 애니메이션 가능.</div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-card-icon">💡</div>
+        <div class="layer-card-name"><span>08</span> Light</div>
+        <div class="layer-card-desc">3D 레이어에 조명 효과 추가. Spot·Point·Ambient·Parallel 4종류.</div>
+      </div>
+    </div>
+
+    <div class="s-tag" style="margin-bottom:20px;font-size:.65rem;">Transform — 변형 5속성 단축키</div>
+    <table class="transform-table">
+      <thead>
+        <tr>
+          <th>단축키</th>
+          <th>속성명</th>
+          <th>설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="transform-key">A</span></td>
+          <td>Anchor Point (기준점)</td>
+          <td>레이어가 회전·스케일할 때의 기준 좌표. 중앙이 기본이지만 필요에 따라 이동.</td>
+        </tr>
+        <tr>
+          <td><span class="transform-key">P</span></td>
+          <td>Position (위치)</td>
+          <td>X·Y(·Z) 좌표. 키프레임을 찍어 이동 애니메이션 제작의 기본.</td>
+        </tr>
+        <tr>
+          <td><span class="transform-key">S</span></td>
+          <td>Scale (크기)</td>
+          <td>레이어 크기 비율. 100%가 원본. Shift 클릭으로 비율 고정 스케일.</td>
+        </tr>
+        <tr>
+          <td><span class="transform-key">R</span></td>
+          <td>Rotation (회전)</td>
+          <td>2D는 Z축 회전. 3D 레이어에서는 X·Y·Z 개별 제어 가능.</td>
+        </tr>
+        <tr>
+          <td><span class="transform-key">T</span></td>
+          <td>Opacity (불투명도)</td>
+          <td>0% = 완전 투명, 100% = 완전 불투명. 페이드 인·아웃의 핵심.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="s-tag" style="margin-bottom:20px;font-size:.65rem;">Blending Mode — 주요 블렌딩 모드</div>
+    <div class="blend-grid">
+      <div class="blend-card">
+        <div class="blend-name">Normal</div>
+        <div class="blend-desc">기본값. 아래 레이어를 덮어씀. 불투명도로만 조절.</div>
+      </div>
+      <div class="blend-card">
+        <div class="blend-name">Screen</div>
+        <div class="blend-desc">검은색은 투명, 밝을수록 밝아짐. 불꽃·파티클·글로우 합성에 필수.</div>
+      </div>
+      <div class="blend-card">
+        <div class="blend-name">Multiply</div>
+        <div class="blend-desc">흰색은 투명, 어두울수록 어두워짐. 그림자·질감 합성에 사용.</div>
+      </div>
+      <div class="blend-card">
+        <div class="blend-name">Add</div>
+        <div class="blend-desc">두 레이어 색상값을 더함. Screen보다 강하게 빛남. 빛 효과에 활용.</div>
+      </div>
+      <div class="blend-card">
+        <div class="blend-name">Overlay</div>
+        <div class="blend-desc">Multiply+Screen 복합. 중간톤은 유지하며 명암 대비 강화.</div>
+      </div>
+      <div class="blend-card">
+        <div class="blend-name">Luma Matte</div>
+        <div class="blend-desc">위 레이어 밝기를 마스크로 사용. 빛 루마키·트랙매트 작업에 핵심.</div>
+      </div>
+    </div>
+  </div>
+
   <!-- FPS 설명 -->
   <div class="fps-section reveal">
     <div class="fps-header">
       <div class="s-tag" style="margin-bottom:16px;">영상 기초 이론</div>
-      <h3 style="font-family:var(--font-display);font-size:2rem;color:#fff;margin-bottom:8px;">FPS <em style="color:var(--purple-light);">— 프레임 레이트란?</em></h3>
+      <h3 style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:-.03em;">FPS <em style="color:var(--purple-light);">— 프레임 레이트란?</em></h3>
       <p style="font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:32px;">1초에 몇 장의 이미지를 보여주는가. FPS(Frames Per Second)는 영상 작업에서 가장 먼저 이해해야 할 기초 개념입니다.</p>
     </div>
     <div class="fps-grid">
