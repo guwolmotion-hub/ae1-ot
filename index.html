@@ -637,7 +637,21 @@ nav.stuck{
    CURRICULUM SECTION
 ───────────────────────────────────── */
 .curriculum-s{background:rgba(155,89,182,.03);border-top:1px solid rgba(155,89,182,.1);border-bottom:1px solid rgba(155,89,182,.1);}
-.curriculum-header{margin-bottom:60px;}
+.curriculum-header{margin-bottom:40px;}
+/* 탭 버튼 */
+.cur-tabs{display:flex;gap:10px;margin-bottom:40px;}
+.cur-tab{
+  padding:10px 32px;border-radius:99px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  color:rgba(255,255,255,.45);font-family:var(--font-body);
+  font-size:.88rem;font-weight:700;cursor:pointer;
+  transition:all .25s;letter-spacing:.04em;
+}
+.cur-tab:hover{background:rgba(155,89,182,.15);color:#fff;}
+.cur-tab.active{
+  background:var(--purple);border-color:var(--purple);
+  color:#fff;box-shadow:0 4px 20px rgba(155,89,182,.35);
+}
 .curriculum-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -878,8 +892,8 @@ footer{
 <nav id="nav">
   <div class="nav-logo"><em>AE</em>1 · OT</div>
   <ul class="nav-links">
-    <li><a href="#intro">수업소개</a></li>
     <li><a href="#instructor">강사소개</a></li>
+    <li><a href="#intro">수업소개</a></li>
     <li><a href="#curriculum">커리큘럼</a></li>
     <li><a href="#career">취업전망</a></li>
   </ul>
@@ -930,6 +944,77 @@ footer{
     SCROLL
   </div>
 </section>
+<!-- INSTRUCTOR SECTION -->
+<section class="s instructor-s" id="instructor">
+  <div class="s-inner">
+    <div class="instructor-layout">
+      <div class="inst-left reveal">
+        <div class="inst-tag">강사 소개</div>
+        <div class="inst-name-en">JEONG<br>SEIL</div>
+        <div class="inst-name-kr">정세일 학과장</div>
+        <div class="inst-role-badge">
+          <span>SBS아카데미 구월지점</span>
+          <em>영상/CG학과장</em>
+        </div>
+        <div class="inst-career-list">
+          <div class="inst-career-item">
+            <div class="inst-career-dot"></div>
+            <div class="inst-career-text">
+              <strong>3D / 2D 영상 디자인 스튜디오</strong>
+              제품 렌더링, 장난감 시네마틱, 광고 영상 제작 (계약직/프리랜서)
+            </div>
+          </div>
+          <div class="inst-career-item">
+            <div class="inst-career-dot"></div>
+            <div class="inst-career-text">
+              <strong>포스트프로덕션</strong>
+              실사 촬영 영상에 3D 합성, VFX 작업, 색보정
+            </div>
+          </div>
+          <div class="inst-career-item">
+            <div class="inst-career-dot"></div>
+            <div class="inst-career-text">
+              <strong>SBS아카데미 구월지점 학과장 · 5년차</strong>
+              Cinema 4D · After Effects · 모션그래픽 학과장
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inst-right reveal">
+        <div class="inst-stat-grid">
+          <div class="inst-stat-card">
+            <div class="inst-stat-num">5Y</div>
+            <div class="inst-stat-label">강사 경력</div>
+          </div>
+          <div class="inst-stat-card">
+            <div class="inst-stat-num">3D+</div>
+            <div class="inst-stat-label">업계 경력</div>
+          </div>
+          <div class="inst-stat-card">
+            <div class="inst-stat-num">C4D</div>
+            <div class="inst-stat-label">Cinema 4D</div>
+          </div>
+          <div class="inst-stat-card">
+            <div class="inst-stat-num">AE</div>
+            <div class="inst-stat-label">After Effects</div>
+          </div>
+        </div>
+        <div class="inst-work-tags">
+          <span class="inst-work-tag">모션그래픽</span>
+          <span class="inst-work-tag">3D 렌더링</span>
+          <span class="inst-work-tag">광고 영상</span>
+          <span class="inst-work-tag">VFX 합성</span>
+          <span class="inst-work-tag">색보정</span>
+          <span class="inst-work-tag">시네마틱</span>
+          <span class="inst-work-tag">After Effects</span>
+          <span class="inst-work-tag">Cinema 4D</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- INTRO SECTION -->
 <section class="s intro-s" id="intro">
@@ -1043,94 +1128,23 @@ footer{
   </div>
 </section>
 
-<!-- INSTRUCTOR SECTION -->
-<section class="s instructor-s" id="instructor">
-  <div class="s-inner">
-    <div class="instructor-layout">
-      <div class="inst-left reveal">
-        <div class="inst-tag">강사 소개</div>
-        <div class="inst-name-en">JEONG<br>SEIL</div>
-        <div class="inst-name-kr">정세일 학과장</div>
-        <div class="inst-role-badge">
-          <span>SBS아카데미 구월지점</span>
-          <em>영상/CG학과장</em>
-        </div>
-        <div class="inst-career-list">
-          <div class="inst-career-item">
-            <div class="inst-career-dot"></div>
-            <div class="inst-career-text">
-              <strong>3D / 2D 영상 디자인 스튜디오</strong>
-              제품 렌더링, 장난감 시네마틱, 광고 영상 제작 (계약직/프리랜서)
-            </div>
-          </div>
-          <div class="inst-career-item">
-            <div class="inst-career-dot"></div>
-            <div class="inst-career-text">
-              <strong>포스트프로덕션</strong>
-              실사 촬영 영상에 3D 합성, VFX 작업, 색보정
-            </div>
-          </div>
-          <div class="inst-career-item">
-            <div class="inst-career-dot"></div>
-            <div class="inst-career-text">
-              <strong>SBS아카데미 구월지점 학과장 · 5년차</strong>
-              Cinema 4D · After Effects · 모션그래픽 학과장
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="inst-right reveal">
-        <div class="inst-stat-grid">
-          <div class="inst-stat-card">
-            <div class="inst-stat-num">5Y</div>
-            <div class="inst-stat-label">강사 경력</div>
-          </div>
-          <div class="inst-stat-card">
-            <div class="inst-stat-num">3D+</div>
-            <div class="inst-stat-label">업계 경력</div>
-          </div>
-          <div class="inst-stat-card">
-            <div class="inst-stat-num">C4D</div>
-            <div class="inst-stat-label">Cinema 4D</div>
-          </div>
-          <div class="inst-stat-card">
-            <div class="inst-stat-num">AE</div>
-            <div class="inst-stat-label">After Effects</div>
-          </div>
-        </div>
-        <div class="inst-work-tags">
-          <span class="inst-work-tag">모션그래픽</span>
-          <span class="inst-work-tag">3D 렌더링</span>
-          <span class="inst-work-tag">광고 영상</span>
-          <span class="inst-work-tag">VFX 합성</span>
-          <span class="inst-work-tag">색보정</span>
-          <span class="inst-work-tag">시네마틱</span>
-          <span class="inst-work-tag">After Effects</span>
-          <span class="inst-work-tag">Cinema 4D</span>
-        </div>
-        <div class="inst-contact-wrap">
-          <div class="inst-contact-label">Contact / SNS</div>
-          <div class="inst-contact-inner">
-            <img src="qr.jpg" alt="QR코드" class="inst-qr-img">
-            <div class="inst-contact-desc">
-              QR코드를 스캔하면<br>강사의 SNS 및 포트폴리오로<br>연결됩니다.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CURRICULUM SECTION -->
 <section class="s curriculum-s" id="curriculum">
   <div class="s-inner">
     <div class="curriculum-header">
       <div class="s-tag">커리큘럼</div>
-      <h2 class="s-h reveal">16 DAYS<br><em>CURRICULUM</em></h2>
-      <p class="s-p reveal">인터페이스 기초부터 영상합성까지, 단계적으로 설계된 16일 완성 과정.</p>
+      <h2 class="s-h reveal">AE 1·2·3<br><em>CURRICULUM</em></h2>
+      <p class="s-p reveal">에펙 1·2·3 전 과정, 각 16일 완성 커리큘럼.</p>
     </div>
-    <div class="curriculum-grid reveal">
+    <!-- TAB BUTTONS -->
+    <div class="cur-tabs reveal">
+      <button class="cur-tab active" onclick="switchTab(this,'ae1')">에펙 1</button>
+      <button class="cur-tab" onclick="switchTab(this,'ae2')">에펙 2</button>
+      <button class="cur-tab" onclick="switchTab(this,'ae3')">에펙 3</button>
+    </div>
+
+    <!-- AE1 -->
+    <div class="curriculum-grid reveal" id="tab-ae1">
       <!-- Day 1~8 -->
       <div class="day-card">
         <div class="day-num">01</div>
@@ -1261,7 +1275,48 @@ footer{
           <div class="day-desc">2D 트래킹 기능을 활용한 합성</div>
         </div>
       </div>
-    </div>
+    </div><!-- /tab-ae1 -->
+
+    <!-- AE2 -->
+    <div class="curriculum-grid" id="tab-ae2" style="display:none">
+      <div class="day-card"><div class="day-num">01</div><div class="day-content"><div class="day-topic">3D 레이어 (1)</div><div class="day-title">3D 레이어 기초</div><div class="day-desc">3D레이어 기초 개념 배워보기</div></div></div>
+      <div class="day-card"><div class="day-num">02</div><div class="day-content"><div class="day-topic">3D 레이어 (2) + 벨류 그래프</div><div class="day-title">주사위 & 띠용모션</div><div class="day-desc">주사위 만들면서 3D 연습하기 + 띠용모션 만들기</div></div></div>
+      <div class="day-card"><div class="day-num">03</div><div class="day-content"><div class="day-topic">농구공 튀기기</div><div class="day-title">키프레임 이징</div><div class="day-desc">공 튀기는 모션 만들면서 키프레임 모양 이해하기</div></div></div>
+      <div class="day-card"><div class="day-num">04</div><div class="day-content"><div class="day-topic">농구공 튀기기 실습</div><div class="day-title">모션 완성</div><div class="day-desc">키프레임 모양 개념을 이해해 농구공 튀기기 모션 완성하기</div></div></div>
+      <div class="day-card"><div class="day-num">05</div><div class="day-content"><div class="day-topic">불 애니메이션</div><div class="day-title">파티클 표현</div><div class="day-desc">1개월차 내용을 활용해 불 애니메이션 만들기</div></div></div>
+      <div class="day-card"><div class="day-num">06</div><div class="day-content"><div class="day-topic">매핑 (1)</div><div class="day-title">글리치 이펙트</div><div class="day-desc">Fractal Noise를 활용해 글리치 만들기</div></div></div>
+      <div class="day-card"><div class="day-num">07</div><div class="day-content"><div class="day-topic">매핑 (2) + 룩 디벨롭</div><div class="day-title">디자인 완성</div><div class="day-desc">글리치 완성하면서 디자인 완성해넣기</div></div></div>
+      <div class="day-card"><div class="day-num">08</div><div class="day-content"><div class="day-topic">일러스트 활용 (1)</div><div class="day-title">자동차 애니메이션</div><div class="day-desc">자동차 애니메이션 만들기</div></div></div>
+      <div class="day-card"><div class="day-num">09</div><div class="day-content"><div class="day-topic">일러스트 활용 (2)</div><div class="day-title">자동차 완성</div><div class="day-desc">자동차 애니메이션 완성하기</div></div></div>
+      <div class="day-card"><div class="day-num">10</div><div class="day-content"><div class="day-topic">Fake 3D (1)</div><div class="day-title">Fake 3D 집</div><div class="day-desc">도형레이어의 Path를 활용해 Fake 3D 집 애니메이션 만들기</div></div></div>
+      <div class="day-card"><div class="day-num">11</div><div class="day-content"><div class="day-topic">Fake 3D (2)</div><div class="day-title">별 배경 완성</div><div class="day-desc">집 애니메이션 완성하면서 별 배경만드는 방법 배워보기</div></div></div>
+      <div class="day-card featured"><div class="day-num">12</div><div class="day-content"><div class="day-topic">옵티컬 플레어 (1)</div><div class="day-title">CG 빛 효과</div><div class="day-desc">빛을 만드는 CG인 옵티컬 플레어 써보기 + 기초 개념 이해하기</div></div></div>
+      <div class="day-card featured"><div class="day-num">13</div><div class="day-content"><div class="day-topic">옵티컬 플레어 (2)</div><div class="day-title">지구 애니메이션</div><div class="day-desc">옵티컬플레어로 지구 애니메이션 만들기</div></div></div>
+      <div class="day-card featured"><div class="day-num">14</div><div class="day-content"><div class="day-topic">파티큘러 (1)</div><div class="day-title">파티클 기초</div><div class="day-desc">파티큘러 관련 효과 이해, 파티큘러 개념 이해</div></div></div>
+      <div class="day-card featured"><div class="day-num">15</div><div class="day-content"><div class="day-topic">파티큘러 (2)</div><div class="day-title">폭죽 애니메이션</div><div class="day-desc">파티큘러로 폭죽 만들기</div></div></div>
+      <div class="day-card featured"><div class="day-num">16</div><div class="day-content"><div class="day-topic">3D 트래킹</div><div class="day-title">3D 합성 트래킹</div><div class="day-desc">3D 트래킹을 이용한 합성방법 배워보기</div></div></div>
+    </div><!-- /tab-ae2 -->
+
+    <!-- AE3 -->
+    <div class="curriculum-grid" id="tab-ae3" style="display:none">
+      <div class="day-card"><div class="day-num">01</div><div class="day-content"><div class="day-topic">트렌드 파악 & 분석</div><div class="day-title">소재 탐색</div><div class="day-desc">디자인 트렌드와 작품 제작에 필요한 본인이 좋아하는 소재 찾아보기</div></div></div>
+      <div class="day-card"><div class="day-num">02</div><div class="day-content"><div class="day-topic">기초 모션 심화</div><div class="day-title">Motion Sketch & Rove</div><div class="day-desc">Motion Sketch와 Rove Across Time 배우면서 기초 모션 내용 배워보기</div></div></div>
+      <div class="day-card"><div class="day-num">03</div><div class="day-content"><div class="day-topic">브랜드 애니메이션 (1)</div><div class="day-title">텍스트 모션</div><div class="day-desc">Transform 모션을 단축키로 적용해 텍스트로 애니메이션 따라만들기</div></div></div>
+      <div class="day-card"><div class="day-num">04</div><div class="day-content"><div class="day-topic">브랜드 애니메이션 (2)</div><div class="day-title">실습 완성</div><div class="day-desc">본인이 정한 텍스트로 브랜드 애니메이션 만들기 실습</div></div></div>
+      <div class="day-card"><div class="day-num">05</div><div class="day-content"><div class="day-topic">3D 타이틀 제작 (1)</div><div class="day-title">카메라 레이어</div><div class="day-desc">예제를 통해 카메라 레이어와 관성넣는 방법 배우는 연습하기</div></div></div>
+      <div class="day-card"><div class="day-num">06</div><div class="day-content"><div class="day-topic">3D 타이틀 제작 (2)</div><div class="day-title">호러 타이틀</div><div class="day-desc">예제를 통해 호러 타이틀 제작해보고 본인 실습 스타일프레임 만들기</div></div></div>
+      <div class="day-card"><div class="day-num">07</div><div class="day-content"><div class="day-topic">3D 타이틀 실습</div><div class="day-title">스타일프레임 → 타이틀</div><div class="day-desc">만든 스타일프레임을 토대로 타이틀 만들기</div></div></div>
+      <div class="day-card"><div class="day-num">08</div><div class="day-content"><div class="day-topic">콜라주 아트</div><div class="day-title">Stop Motion 기법</div><div class="day-desc">콜라주 아트에 필요한 기본 개념 배우기 (Stop Motion, Posterize Time)</div></div></div>
+      <div class="day-card"><div class="day-num">09</div><div class="day-content"><div class="day-topic">콜라주 아트 (2)</div><div class="day-title">유튜브 타이틀</div><div class="day-desc">유튜브 타이틀 따라만들면서 콜라주 아트 배워보기</div></div></div>
+      <div class="day-card"><div class="day-num">10</div><div class="day-content"><div class="day-topic">콜라주 아트 실습</div><div class="day-title">나만의 타이틀</div><div class="day-desc">스타일프레임 제작해 본인만의 콜라주 아트 타이틀 만들기</div></div></div>
+      <div class="day-card"><div class="day-num">11</div><div class="day-content"><div class="day-topic">일러스트 아트웍 (1)</div><div class="day-title">박쥐 & 손가락 애니메이션</div><div class="day-desc">직접 그려서 박쥐, 손가락 애니메이션 만들기</div></div></div>
+      <div class="day-card"><div class="day-num">12</div><div class="day-content"><div class="day-topic">일러스트 아트웍 (2)</div><div class="day-title">할로윈 애니메이션</div><div class="day-desc">기획한대로 할로윈 애니메이션 넣기</div></div></div>
+      <div class="day-card featured"><div class="day-num">13</div><div class="day-content"><div class="day-topic">일러스트 아트웍 (3)</div><div class="day-title">애니메이션 제작 실습</div><div class="day-desc">할로윈 일러스트 그려서 기획한대로 애니메이션 제작 실습</div></div></div>
+      <div class="day-card featured"><div class="day-num">14</div><div class="day-content"><div class="day-topic">캐릭터 애니메이션 (1)</div><div class="day-title">Walk Cycle</div><div class="day-desc">Walk Cycle을 활용해 캐릭터 애니메이션 개념 이해하기</div></div></div>
+      <div class="day-card featured"><div class="day-num">15</div><div class="day-content"><div class="day-topic">캐릭터 애니메이션 따라만들기</div><div class="day-title">캐릭터 완성</div><div class="day-desc">캐릭터 애니메이션 따라 만들어보면서 연습하기</div></div></div>
+      <div class="day-card featured"><div class="day-num">16</div><div class="day-content"><div class="day-topic">아트웍 만들기</div><div class="day-title">사막 아트웍</div><div class="day-desc">Fractal Noise를 활용해 사막 아트웍 만들기</div></div></div>
+    </div><!-- /tab-ae3 -->
+
   </div>
 </section>
 
@@ -1368,6 +1423,14 @@ window.addEventListener('scroll',()=>{
 
 // ─── SCROLL REVEAL ───
 const reveals = document.querySelectorAll('.reveal');
+function switchTab(btn, id){
+  document.querySelectorAll('.cur-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  ['ae1','ae2','ae3'].forEach(t=>{
+    const el=document.getElementById('tab-'+t);
+    if(el) el.style.display=(t===id)?'grid':'none';
+  });
+}
 const obs = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
