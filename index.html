@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AFTER EFFECTS 1 OT — SBS아카데미 구월지점</title>
+<title>AFTER EFFECTS OT — SBS아카데미 구월지점</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -880,6 +880,136 @@ footer{
   a[href]::after{content:none !important;}
   body{background:#0a0a0a!important;}
 }
+
+/* ── LICENSE ── */
+.license-s{background:rgba(155,89,182,.03);border-top:1px solid rgba(155,89,182,.08);}
+.license-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.lic-card{
+  padding:32px 28px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-lg);
+  display:flex;flex-direction:column;gap:14px;
+  transition:all .3s;
+}
+.lic-card:hover{background:rgba(155,89,182,.1);border-color:rgba(155,89,182,.3);}
+.lic-badge{
+  display:inline-block;padding:4px 12px;border-radius:99px;
+  font-size:.7rem;font-weight:700;letter-spacing:.08em;
+  background:rgba(155,89,182,.2);color:var(--purple-light);
+  width:fit-content;
+}
+.lic-badge-private{background:rgba(200,164,86,.15);color:var(--gold);}
+.lic-name-en{font-family:var(--font-display);font-size:2.4rem;color:#fff;line-height:1;}
+.lic-name-kr{font-size:.9rem;font-weight:700;color:rgba(255,255,255,.8);}
+.lic-org{font-size:.75rem;color:rgba(255,255,255,.35);font-weight:500;}
+.lic-desc{font-size:.82rem;line-height:1.75;color:rgba(255,255,255,.55);font-weight:500;}
+.lic-levels{display:flex;flex-direction:column;gap:8px;}
+.lic-level{font-size:.8rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:8px;line-height:1.5;}
+.lic-lv-badge{
+  padding:2px 8px;border-radius:4px;font-size:.68rem;font-weight:700;flex-shrink:0;
+}
+.lic-lv-badge.lv1{background:rgba(155,89,182,.3);color:var(--purple-light);}
+.lic-lv-badge.lv2{background:rgba(255,255,255,.1);color:rgba(255,255,255,.6);}
+.lic-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;}
+.lic-tool{
+  padding:4px 12px;border-radius:99px;font-size:.72rem;font-weight:600;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  color:rgba(255,255,255,.5);
+}
+@media(max-width:768px){.license-grid{grid-template-columns:1fr;}}
+
+/* ── ROADMAP ── */
+.roadmap-s{background:transparent;}
+.roadmap-flow{display:flex;flex-direction:column;gap:0;}
+.rm-phase{
+  padding:24px 28px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--r);
+}
+.rm-phase-highlight{
+  background:rgba(155,89,182,.08);
+  border-color:rgba(155,89,182,.25);
+}
+.rm-phase-cert{
+  background:rgba(200,164,86,.06);
+  border-color:rgba(200,164,86,.2);
+}
+.rm-phase-goal{
+  background:rgba(155,89,182,.12);
+  border-color:rgba(155,89,182,.3);
+}
+.rm-phase-label{
+  font-size:.72rem;font-weight:700;letter-spacing:.1em;
+  color:var(--purple-light);margin-bottom:14px;text-transform:uppercase;
+}
+.rm-phase-cert .rm-phase-label{color:var(--gold);}
+.rm-phase-goal .rm-phase-label{color:var(--purple-light);}
+.rm-steps{display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
+.rm-step{
+  padding:8px 16px;border-radius:8px;
+  background:rgba(255,255,255,.06);
+  font-size:.82rem;font-weight:600;color:rgba(255,255,255,.7);
+  text-align:center;line-height:1.4;
+}
+.rm-step small{display:block;font-size:.68rem;color:rgba(255,255,255,.35);font-weight:500;}
+.rm-step-key{
+  background:rgba(155,89,182,.2);
+  border:1px solid rgba(155,89,182,.3);
+  color:#fff;
+}
+.rm-step-goal{
+  background:rgba(155,89,182,.15);
+  border:1px solid rgba(155,89,182,.25);
+  color:#fff;font-weight:700;
+}
+.rm-step-final{
+  background:linear-gradient(135deg,var(--purple),var(--purple-dark));
+  color:#fff;font-weight:700;padding:10px 20px;
+}
+.rm-arrow{color:rgba(255,255,255,.2);font-size:1.1rem;}
+.rm-connector{
+  text-align:center;color:rgba(155,89,182,.4);
+  font-size:1.4rem;padding:6px 0;
+}
+@media(max-width:768px){.rm-steps{gap:6px;}.rm-step{font-size:.75rem;padding:6px 10px;}}
+
+/* ── FPS ── */
+.fps-section{margin-top:60px;padding-top:60px;border-top:1px solid rgba(255,255,255,.07);}
+.fps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;}
+.fps-card{
+  padding:24px 20px;border-radius:var(--r);
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  text-align:center;transition:all .3s;
+}
+.fps-card:hover{background:rgba(155,89,182,.1);border-color:rgba(155,89,182,.25);}
+.fps-card-highlight{
+  background:rgba(155,89,182,.1);border-color:rgba(155,89,182,.25);
+}
+.fps-num{font-family:var(--font-display);font-size:3rem;color:#fff;line-height:1;}
+.fps-label{font-size:.7rem;font-weight:700;color:var(--purple-light);letter-spacing:.1em;margin-bottom:10px;}
+.fps-tag-wrap{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;margin-bottom:12px;}
+.fps-tag{
+  padding:2px 8px;border-radius:99px;font-size:.65rem;font-weight:700;
+  background:rgba(155,89,182,.15);color:var(--purple-light);
+}
+.fps-desc{font-size:.78rem;line-height:1.7;color:rgba(255,255,255,.45);text-align:left;}
+.dropframe-box{
+  display:flex;gap:20px;align-items:flex-start;
+  padding:28px 32px;border-radius:var(--r);
+  background:rgba(200,164,86,.06);border:1px solid rgba(200,164,86,.2);
+}
+.df-icon{font-size:2rem;flex-shrink:0;}
+.df-title{font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:10px;}
+.df-desc{font-size:.83rem;line-height:1.8;color:rgba(255,255,255,.55);}
+.df-desc strong{color:rgba(255,255,255,.85);}
+.df-desc code{
+  background:rgba(155,89,182,.2);color:var(--purple-light);
+  padding:1px 6px;border-radius:4px;font-family:monospace;font-size:.85em;
+}
+@media(max-width:768px){.fps-grid{grid-template-columns:repeat(2,1fr);}.dropframe-box{flex-direction:column;}}
+
 </style>
 </head>
 <body>
@@ -890,11 +1020,12 @@ footer{
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="nav-logo"><em>AE</em>1 · OT</div>
+  <div class="nav-logo"><em>AFTER</em>EFFECTS OT</div>
   <ul class="nav-links">
     <li><a href="#instructor">강사소개</a></li>
-    <li><a href="#intro">수업소개</a></li>
     <li><a href="#curriculum">커리큘럼</a></li>
+    <li><a href="#license">자격증</a></li>
+    <li><a href="#roadmap">로드맵</a></li>
     <li><a href="#career">취업전망</a></li>
   </ul>
   <div class="nav-pill"><span></span>SBS아카데미 구월지점</div>
@@ -907,7 +1038,7 @@ footer{
   <div class="hero-glow2"></div>
   <div class="hero-inner">
     <div class="hero-eyebrow">SBS아카데미 구월지점 · 영상/CG학과</div>
-    <div class="hero-date-badge"><em>2024</em> ORIENTATION</div>
+    <div class="hero-date-badge"><em>2026</em> ORIENTATION</div>
     <div class="hero-title-wrap">
       <span class="hero-title">AFTER</span>
     </div>
@@ -915,7 +1046,7 @@ footer{
       <span class="hero-title t2">EFFECTS</span>
     </div>
     <div class="hero-title-wrap">
-      <span class="hero-title t3">COURSE 1</span>
+      <span class="hero-title t3">1 · 2 · 3</span>
     </div>
   </div>
   <div class="hero-bottom">
@@ -926,11 +1057,11 @@ footer{
     </div>
     <div class="hero-stats-row">
       <div class="hero-stat">
-        <div class="hero-stat-n">16</div>
-        <div class="hero-stat-l">Days</div>
+        <div class="hero-stat-n">1·2·3</div>
+        <div class="hero-stat-l">Course</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-n">중상</div>
+        <div class="hero-stat-n">중→고</div>
         <div class="hero-stat-l">Difficulty</div>
       </div>
       <div class="hero-stat">
@@ -1018,67 +1149,6 @@ footer{
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- INTRO SECTION -->
-<section class="s intro-s" id="intro">
-  <div class="s-inner">
-    <div class="s-tag">수업 소개</div>
-    <h2 class="s-h reveal">AFTER EFFECTS<br><em>란 무엇인가</em></h2>
-    <p class="s-p reveal">Adobe After Effects는 영상 후반 작업(Post-Production)의 핵심 도구로, 2D/3D를 막론하고 전 세계 방송·광고·영화 현장에서 사용되는 업계 표준 소프트웨어입니다.</p>
-
-    <div class="intro-grid reveal">
-      <div class="intro-left">
-        <div class="intro-kv">MOTION<br><em>GRAPHIC</em><br>TOOL</div>
-        <p class="intro-lead">포토샵과 일러스트에서 익힌 개념을 <strong>움직임(Motion)</strong>으로 확장합니다. 정지된 이미지가 살아 움직이는 순간, After Effects가 시작됩니다.</p>
-        <div class="intro-tags">
-          <span class="intro-tag">컷편집</span>
-          <span class="intro-tag">키네틱 타이포그래피</span>
-          <span class="intro-tag">모션그래픽</span>
-          <span class="intro-tag">영상합성</span>
-          <span class="intro-tag">Fake 3D</span>
-          <span class="intro-tag">3D 카메라</span>
-          <span class="intro-tag">VFX</span>
-          <span class="intro-tag">크로마키</span>
-          <span class="intro-tag">로토브러시</span>
-          <span class="intro-tag">모션 트래킹</span>
-        </div>
-      </div>
-      <div class="intro-right">
-        <div class="intro-card ripple-el">
-          <div class="intro-card-icon">🎬</div>
-          <div class="intro-card-title">컷편집 & 영상 제작</div>
-          <div class="intro-card-desc">기본 컷편집부터 트랜지션, 타임 리매핑까지. 영상의 흐름을 직접 설계하고 편집하는 능력을 습득합니다.</div>
-        </div>
-        <div class="intro-card ripple-el">
-          <div class="intro-card-icon">✨</div>
-          <div class="intro-card-title">모션그래픽 & 애니메이션</div>
-          <div class="intro-card-desc">쉐이프 레이어, 텍스트 애니메이션, 익스프레션을 활용해 세련된 2D 모션그래픽을 제작합니다.</div>
-        </div>
-        <div class="intro-card ripple-el">
-          <div class="intro-card-icon">🎭</div>
-          <div class="intro-card-title">영상합성 & VFX</div>
-          <div class="intro-card-desc">마스크, 매트, 크로마키, 로토브러시, 2D 트래킹으로 실사 영상에 CG를 자연스럽게 합성합니다.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- AE vs Premiere -->
-    <div class="intro-diff-banner reveal">
-      <div class="diff-item">
-        <div class="diff-title">PREMIERE</div>
-        <div class="diff-subtitle">영상 편집 전문</div>
-        <div class="diff-desc">컷편집·색보정 중심<br>방송·유튜브 편집 최적화<br>타임라인 기반 워크플로우</div>
-      </div>
-      <div class="diff-vs">VS</div>
-      <div class="diff-item">
-        <div class="diff-title" style="color:var(--purple)">AFTER EFFECTS</div>
-        <div class="diff-subtitle">모션 & 합성 전문</div>
-        <div class="diff-desc highlight">합성·모션그래픽 중심<br>CG·VFX·방송 그래픽 제작<br>레이어 기반 컴포지팅</div>
       </div>
     </div>
   </div>
@@ -1328,6 +1398,154 @@ footer{
   </div>
 </section>
 
+<!-- LICENSE SECTION -->
+<section class="s license-s" id="license">
+  <div class="s-inner">
+    <div class="s-tag">자격증 안내</div>
+    <h2 class="s-h reveal">CERTIFICATES</h2>
+    <p class="s-p reveal">영상/모션 학과 과정 중 취득 가능한 국가·민간 자격증입니다. 취업 포트폴리오와 함께 경쟁력을 높여줍니다.</p>
+    <div class="license-grid reveal">
+
+      <!-- GTQ -->
+      <div class="lic-card">
+        <div class="lic-badge">국가공인</div>
+        <div class="lic-name-en">GTQ</div>
+        <div class="lic-name-kr">그래픽기술자격</div>
+        <div class="lic-org">한국생산성본부 (KPC) 주관</div>
+        <div class="lic-desc">Adobe Photoshop을 활용한 디지털 이미지 편집·합성·보정 능력을 인증하는 국가공인 자격증. 1급과 2급으로 나뉘며, 1급이 더 높은 수준입니다. 포토샵 실무 능력을 공식적으로 증명하는 가장 대표적인 자격증입니다.</div>
+        <div class="lic-levels">
+          <div class="lic-level"><span class="lic-lv-badge lv1">1급</span> 고급 합성, 채널, 필터, 색보정 — 난이도 상</div>
+          <div class="lic-level"><span class="lic-lv-badge lv2">2급</span> 기본 편집, 레이어, 선택툴 — 난이도 중</div>
+        </div>
+        <div class="lic-tools"><span class="lic-tool">Photoshop</span></div>
+      </div>
+
+      <!-- 컴퓨터그래픽스운용기능사 -->
+      <div class="lic-card">
+        <div class="lic-badge">국가기술</div>
+        <div class="lic-name-en">컴그운</div>
+        <div class="lic-name-kr">컴퓨터그래픽스운용기능사</div>
+        <div class="lic-org">한국산업인력공단 (HRD) 주관</div>
+        <div class="lic-desc">그래픽 디자인 전반을 평가하는 국가기술자격증. 시각디자인, 광고, 편집 등 그래픽 콘텐츠를 디지털 도구로 제작하는 능력을 검증합니다. Photoshop·Illustrator를 모두 활용하며, 작업형 실기 시험을 통과해야 합니다.</div>
+        <div class="lic-levels">
+          <div class="lic-level"><span class="lic-lv-badge lv1">필기</span> 디자인 이론, 색채, 컴퓨터 일반</div>
+          <div class="lic-level"><span class="lic-lv-badge lv2">실기</span> Photoshop + Illustrator 작업형</div>
+        </div>
+        <div class="lic-tools"><span class="lic-tool">Photoshop</span><span class="lic-tool">Illustrator</span></div>
+      </div>
+
+      <!-- ACP -->
+      <div class="lic-card">
+        <div class="lic-badge lic-badge-private">민간자격</div>
+        <div class="lic-name-en">ACP</div>
+        <div class="lic-name-kr">Adobe Certified Professional</div>
+        <div class="lic-org">Adobe 공식 인증 자격증</div>
+        <div class="lic-desc">Adobe가 직접 인증하는 공식 자격증으로, Photoshop / Illustrator / Premiere Pro 등 제품별로 취득 가능합니다. 전 세계적으로 인정받는 국제 자격증이며, Adobe 프로그램 실무 활용 능력을 공인합니다.</div>
+        <div class="lic-levels">
+          <div class="lic-level"><span class="lic-lv-badge lv1">PS</span> Photoshop — 이미지 편집·합성</div>
+          <div class="lic-level"><span class="lic-lv-badge lv1">AI</span> Illustrator — 벡터 그래픽 디자인</div>
+          <div class="lic-level"><span class="lic-lv-badge lv2">Pr</span> Premiere Pro — 영상 편집</div>
+        </div>
+        <div class="lic-tools"><span class="lic-tool">Photoshop</span><span class="lic-tool">Illustrator</span><span class="lic-tool">Premiere Pro</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP SECTION -->
+<section class="s roadmap-s" id="roadmap">
+  <div class="s-inner">
+    <div class="s-tag">학과 로드맵</div>
+    <h2 class="s-h reveal">영상 / 모션학과<br><em>ROAD MAP</em></h2>
+    <p class="s-p reveal">입문부터 취업까지, 영상/모션학과의 단계별 커리큘럼 로드맵입니다.</p>
+    <div class="roadmap-flow reveal">
+
+      <div class="rm-phase">
+        <div class="rm-phase-label">기초 입문</div>
+        <div class="rm-steps">
+          <div class="rm-step">핸드드로잉</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">포토샵</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">일러스트</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">디지털드로잉</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">다-드로잉</div>
+        </div>
+      </div>
+
+      <div class="rm-connector">↓</div>
+
+      <div class="rm-phase">
+        <div class="rm-phase-label">그래픽 기초</div>
+        <div class="rm-steps">
+          <div class="rm-step">블렌더 1-2</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">그래픽디자인</div>
+        </div>
+      </div>
+
+      <div class="rm-connector">↓</div>
+
+      <div class="rm-phase rm-phase-highlight">
+        <div class="rm-phase-label">영상 핵심 과정</div>
+        <div class="rm-steps">
+          <div class="rm-step rm-step-key">프리미어</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step rm-step-key">에펙 1·2·3</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step rm-step-key">C4D 1-4</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">언리얼 엔진</div>
+        </div>
+      </div>
+
+      <div class="rm-connector">↓</div>
+
+      <div class="rm-phase rm-phase-cert">
+        <div class="rm-phase-label">자격증</div>
+        <div class="rm-steps">
+          <div class="rm-step">ACP<br><small>포토샵/일러/프리미어</small></div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">GTQ 1급<br><small>포토샵/일러스트</small></div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">컴그운<br><small>컴퓨터그래픽스</small></div>
+        </div>
+      </div>
+
+      <div class="rm-connector">↓</div>
+
+      <div class="rm-phase">
+        <div class="rm-phase-label">취업 준비</div>
+        <div class="rm-steps">
+          <div class="rm-step">AI자격증 대비</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">에펙 영상모션<br><small>심화</small></div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step">AI크리에이터<br><small>영상모션</small></div>
+        </div>
+      </div>
+
+      <div class="rm-connector">↓</div>
+
+      <div class="rm-phase rm-phase-goal">
+        <div class="rm-phase-label">포트폴리오 &amp; Goal</div>
+        <div class="rm-steps">
+          <div class="rm-step rm-step-goal">2D 모션 포트폴리오</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step rm-step-goal">3D 모션 포트폴리오</div>
+          <div class="rm-arrow">→</div>
+          <div class="rm-step rm-step-final">🎯 취업 / 프리랜서</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <!-- CAREER SECTION -->
 <section class="s career-s" id="career">
   <div class="s-inner">
@@ -1415,6 +1633,116 @@ footer{
     </div>
   </div>
 </section>
+
+<!-- INTRO SECTION -->
+<section class="s intro-s" id="intro">
+  <div class="s-inner">
+    <div class="s-tag">수업 소개</div>
+    <h2 class="s-h reveal">AFTER EFFECTS<br><em>란 무엇인가</em></h2>
+    <p class="s-p reveal">Adobe After Effects는 영상 후반 작업(Post-Production)의 핵심 도구로, 2D/3D를 막론하고 전 세계 방송·광고·영화 현장에서 사용되는 업계 표준 소프트웨어입니다.</p>
+
+    <div class="intro-grid reveal">
+      <div class="intro-left">
+        <div class="intro-kv">MOTION<br><em>GRAPHIC</em><br>TOOL</div>
+        <p class="intro-lead">포토샵과 일러스트에서 익힌 개념을 <strong>움직임(Motion)</strong>으로 확장합니다. 정지된 이미지가 살아 움직이는 순간, After Effects가 시작됩니다.</p>
+        <div class="intro-tags">
+          <span class="intro-tag">컷편집</span>
+          <span class="intro-tag">키네틱 타이포그래피</span>
+          <span class="intro-tag">모션그래픽</span>
+          <span class="intro-tag">영상합성</span>
+          <span class="intro-tag">Fake 3D</span>
+          <span class="intro-tag">3D 카메라</span>
+          <span class="intro-tag">VFX</span>
+          <span class="intro-tag">크로마키</span>
+          <span class="intro-tag">로토브러시</span>
+          <span class="intro-tag">모션 트래킹</span>
+        </div>
+      </div>
+      <div class="intro-right">
+        <div class="intro-card ripple-el">
+          <div class="intro-card-icon">🎬</div>
+          <div class="intro-card-title">컷편집 & 영상 제작</div>
+          <div class="intro-card-desc">기본 컷편집부터 트랜지션, 타임 리매핑까지. 영상의 흐름을 직접 설계하고 편집하는 능력을 습득합니다.</div>
+        </div>
+        <div class="intro-card ripple-el">
+          <div class="intro-card-icon">✨</div>
+          <div class="intro-card-title">모션그래픽 & 애니메이션</div>
+          <div class="intro-card-desc">쉐이프 레이어, 텍스트 애니메이션, 익스프레션을 활용해 세련된 2D 모션그래픽을 제작합니다.</div>
+        </div>
+        <div class="intro-card ripple-el">
+          <div class="intro-card-icon">🎭</div>
+          <div class="intro-card-title">영상합성 & VFX</div>
+          <div class="intro-card-desc">마스크, 매트, 크로마키, 로토브러시, 2D 트래킹으로 실사 영상에 CG를 자연스럽게 합성합니다.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AE vs Premiere -->
+    <div class="intro-diff-banner reveal">
+      <div class="diff-item">
+        <div class="diff-title">PREMIERE</div>
+        <div class="diff-subtitle">영상 편집 전문</div>
+        <div class="diff-desc">컷편집·색보정 중심<br>방송·유튜브 편집 최적화<br>타임라인 기반 워크플로우</div>
+      </div>
+      <div class="diff-vs">VS</div>
+      <div class="diff-item">
+        <div class="diff-title" style="color:var(--purple)">AFTER EFFECTS</div>
+        <div class="diff-subtitle">모션 & 합성 전문</div>
+        <div class="diff-desc highlight">합성·모션그래픽 중심<br>CG·VFX·방송 그래픽 제작<br>레이어 기반 컴포지팅</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FPS 설명 -->
+  <div class="fps-section reveal">
+    <div class="fps-header">
+      <div class="s-tag" style="margin-bottom:16px;">영상 기초 이론</div>
+      <h3 style="font-family:var(--font-display);font-size:2rem;color:#fff;margin-bottom:8px;">FPS <em style="color:var(--purple-light);">— 프레임 레이트란?</em></h3>
+      <p style="font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:32px;">1초에 몇 장의 이미지를 보여주는가. FPS(Frames Per Second)는 영상 작업에서 가장 먼저 이해해야 할 기초 개념입니다.</p>
+    </div>
+    <div class="fps-grid">
+      <div class="fps-card">
+        <div class="fps-num">24</div>
+        <div class="fps-label">fps</div>
+        <div class="fps-tag-wrap"><span class="fps-tag">영화</span><span class="fps-tag">시네마틱</span></div>
+        <div class="fps-desc">전 세계 영화 표준. 자연스러운 모션 블러와 영화적 느낌을 만들어냅니다. Cinema 4D 렌더링, 뮤직비디오, 광고 영상 제작 시 가장 많이 사용합니다.</div>
+      </div>
+      <div class="fps-card fps-card-highlight">
+        <div class="fps-num">29.97</div>
+        <div class="fps-label">fps</div>
+        <div class="fps-tag-wrap"><span class="fps-tag">방송</span><span class="fps-tag">NTSC</span><span class="fps-tag">한국·미국</span></div>
+        <div class="fps-desc">한국·미국 방송 표준(NTSC). 정확히는 30000÷1001 = 29.97002... fps. TV 방송, 예능, 드라마, 뉴스 등 국내 방송 콘텐츠에 사용됩니다. AE 신규 컴포지션 기본값.</div>
+      </div>
+      <div class="fps-card">
+        <div class="fps-num">25</div>
+        <div class="fps-label">fps</div>
+        <div class="fps-tag-wrap"><span class="fps-tag">방송</span><span class="fps-tag">PAL</span><span class="fps-tag">유럽</span></div>
+        <div class="fps-desc">유럽·중동 방송 표준(PAL). 25fps는 정수이므로 드랍프레임 문제가 없습니다. 유럽 클라이언트 납품 시 사용.</div>
+      </div>
+      <div class="fps-card fps-card-highlight">
+        <div class="fps-num">60</div>
+        <div class="fps-label">fps</div>
+        <div class="fps-tag-wrap"><span class="fps-tag">유튜브</span><span class="fps-tag">게임</span><span class="fps-tag">스포츠</span></div>
+        <div class="fps-desc">매우 부드러운 움직임. 게임 영상, 스포츠 중계, 유튜브 하이프레임 영상에 사용. 슬로우모션 효과를 위해 60fps로 촬영 후 24fps로 출력하기도 합니다.</div>
+      </div>
+    </div>
+
+    <!-- 드랍프레임 설명 -->
+    <div class="dropframe-box reveal">
+      <div class="df-icon">⚠️</div>
+      <div class="df-content">
+        <div class="df-title">Drop Frame(드랍프레임)이란?</div>
+        <div class="df-desc">
+          29.97fps는 정확히 30fps가 아니기 때문에, 오랫동안 재생하면 <strong>타임코드(00:00:00:00)와 실제 시계 시간 사이에 오차</strong>가 누적됩니다.<br><br>
+          이를 해결하기 위해 <strong>드랍프레임(DF)</strong> 방식은 매 분마다 2개 프레임 번호를 건너뜁니다 (단, 10분 단위는 건너뛰지 않음). <strong>실제 프레임을 삭제하는 것이 아니라 번호만 건너뛰는 것</strong>이므로 영상 품질에는 영향이 없습니다.<br><br>
+          방송 납품 시 <strong>29.97 DF</strong>가 맞는지 확인하는 습관이 중요합니다. AE에서는 타임코드에 <code>;</code>(세미콜론)이 표시되면 DF, <code>:</code>(콜론)이면 NDF(논드랍)입니다.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 
 <!-- FOOTER -->
 <footer>
